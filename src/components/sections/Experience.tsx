@@ -106,7 +106,7 @@ export function Experience() {
                 <GitBranch className="w-4 h-4 text-muted-foreground" />
               </div>
               <div className="text-sm font-mono text-muted-foreground">
-                Initial commit: B.Tech CSE @ UPES Dehradun (CGPA 8.35)
+                Initial commit: B.Tech CSE @ UPES Dehradun (Nov. 2024) <b>(CGPA 8.35)</b>
               </div>
             </motion.div>
 

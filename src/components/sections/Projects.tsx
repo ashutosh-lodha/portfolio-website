@@ -106,10 +106,6 @@ export function Projects() {
                 <ShieldCheck className="w-5 h-5 shrink-0 text-secondary" />
                 <span><strong className="text-foreground">Cloud Security Alliance</strong> - Member at UPES chapter.</span>
               </li>
-              <li className="flex gap-3 text-muted-foreground">
-                <ShieldCheck className="w-5 h-5 shrink-0 text-primary" />
-                <span><strong className="text-foreground">Sports Leadership</strong> - Sports Committee Member & Zonal Volleyball Player representing Guna District.</span>
-              </li>
             </ul>
           </div>
         </motion.div>

@@ -16,7 +16,7 @@ export function Footer() {
             <a href="mailto:lodhaashutosh@gmail.com" className="text-muted-foreground hover:text-secondary">[ Email ]</a>
           </div>
         </div>
-        <p className="mt-8 text-center text-xs text-muted-foreground/50 font-mono">© {year} Ashutosh Lodha. Build passing.</p>
+        <p className="mt-8 text-center text-xs text-muted-foreground/50 font-mono">© {year} Ashutosh Lodha.</p>
       </div>
     </footer>
   );
