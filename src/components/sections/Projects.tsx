@@ -8,7 +8,7 @@ export function Projects() {
       slug: "idp-platform",
       description:
         "Internal Developer Platform — a Kubernetes-native control plane that abstracts infra so engineers can ship services with a single manifest. Self-service environments, golden paths, and GitOps-driven deploys.",
-      stack: ["Go", "Kubernetes", "Helm", "Terraform", "AWS", "CI/CD"],
+      stack: ["Go", "Kubernetes", "Helm", "Terraform", "Git", "CI/CD"],
       icon: <Box className="w-5 h-5" />,
       repo: "https://github.com/ashutosh-lodha/idp-platform",
     },
@@ -17,7 +17,7 @@ export function Projects() {
       slug: "api-gateway-rate-limiter",
       description:
         "Distributed API gateway with token-bucket rate limiting backed by Redis. Pluggable middleware, per-route policies, and Prometheus metrics for production observability.",
-      stack: ["Go", "Redis", "NGINX", "Docker", "Prometheus", "Grafana"],
+      stack: ["Go", "Redis", "MySQL", "NGINX", "Docker", "Prometheus", "Grafana"],
       icon: <Server className="w-5 h-5" />,
       repo: "https://github.com/ashutosh-lodha/api-gateway-rate-limiter",
     },
