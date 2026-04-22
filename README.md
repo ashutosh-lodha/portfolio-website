@@ -2,7 +2,7 @@
 
 A high-performance personal portfolio website with a DevOps control-plane aesthetic. Built with modern web technologies for optimal performance and user experience.
 
-- **Live Preview:** https://via.placeholder.com/800x400?text=Portfolio+Preview](https://ashutosh-lodha.vercel.app/
+- **Live Preview:** https://ashutosh-lodha.vercel.app/
 
 ## ✨ Features
 
