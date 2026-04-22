@@ -146,12 +146,11 @@ export function Hero() {
           </div>
 
           <p className="max-w-[560px] text-muted-foreground leading-relaxed text-base md:text-lg">
-            I design{" "}
-            <span className="text-foreground">internal developer platforms</span>{" "}
-            and ship{" "}
-            <span className="text-foreground">cloud-native distributed systems</span>{" "}
-            in Go. I live in Kubernetes manifests, Terraform plans, and Grafana
-            dashboards — turning rough infrastructure into golden paths.
+            I build{" "}
+            <span className="text-foreground">scalable DevOps platforms</span>{" "}
+            and{" "}
+            <span className="text-foreground">full-stack applications</span>.
+            Leveraging Docker, Kubernetes, and CI/CD pipelines, I help teams deploy faster and reduce infrastructure costs.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mt-2">

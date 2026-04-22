@@ -4,21 +4,22 @@ import { useState, useEffect } from "react";
 
 export function About() {
   const [text, setText] = useState("");
-  const fullText = `> Executing whoami...
-Ashutosh Lodha — Platform Engineer / DevOps Engineer
+  const fullText = `> whoami
+Ashutosh Lodha — Platform Engineer
 
-> Analyzing profile...
-Building cloud-native platforms and distributed backend systems.
-Currently focused on Go-based system design, Infrastructure as Code,
-and Kubernetes-native deployments.
+> mission
+Turning complex infrastructure into scalable, self-service platforms.
 
-> Loading attributes...
-[+] Designs golden paths and self-service developer platforms
-[+] Ships production-grade Go services and gateways
-[+] Lives in Kubernetes, Helm, Terraform, and AWS
-[+] Instruments everything with Prometheus + Grafana
+> stack
+Go • Kubernetes • Terraform • AWS • Prometheus • Grafana
 
-> Ready. Waiting for input...`;
+> impact
+[+] Built internal platforms and automated deployments
+[+] Reduced manual ops with CI/CD and IaC workflows
+[+] Enabled faster, reliable releases at scale
+
+> status
+Deploying. Scaling. Open to work.`;
 
   useEffect(() => {
     let currentText = "";
