@@ -7,13 +7,11 @@ export function Experience() {
       title: "Research Analyst",
       company: "Copperpod IP",
       location: "Mohali",
-      date: "Jan 2024 – Present",
+      date: "Jan 2024 – Dec 2025",
       commits: [
-        "Built a CRM with Spring Boot + ReactJS for invoice tracking, legal document sharing, automated notifications.",
-        "Built MERN-stack frontends with Bootstrap.",
+        "Performed source code review and technical analysis of patent claims in software and hardware domains.",
         "Performed patent portfolio analysis, claim charts for infringement & prior art, prepared legal memos."
-      ],
-      tag: "v1.2.0-stable"
+      ]
     },
     {
       title: "Intern (Spyder Project)",
@@ -24,8 +22,7 @@ export function Experience() {
         "Collected real-time location data via Python scrapers (BeautifulSoup, Scrapy).",
         "Debugged with Chrome DevTools, transformed data into GeoJSON maps.",
         "Utilized Trello for Agile project tracking."
-      ],
-      tag: "v0.9.5-beta"
+      ]
     },
     {
       title: "Summer Intern",
@@ -35,8 +32,7 @@ export function Experience() {
       commits: [
         "Built Tourney web app using MERN for advertising and participant registration.",
         "Implemented user auth + sessions, responsive UI, connected with MongoDB."
-      ],
-      tag: "v0.5.0-alpha"
+      ]
     }
   ];
 
@@ -84,9 +80,6 @@ export function Experience() {
                     </div>
                     <div className="flex flex-col items-start md:items-end gap-2">
                       <span className="text-sm font-mono text-muted-foreground">{exp.date}</span>
-                      <span className="text-xs font-mono px-2 py-1 bg-muted rounded-sm border border-border">
-                        {exp.tag}
-                      </span>
                     </div>
                   </div>
 

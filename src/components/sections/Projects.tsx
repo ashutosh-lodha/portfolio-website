@@ -8,12 +8,7 @@ export function Projects() {
       slug: "idp-platform",
       description:
         "Internal Developer Platform — a Kubernetes-native control plane that abstracts infra so engineers can ship services with a single manifest. Self-service environments, golden paths, and GitOps-driven deploys.",
-      stack: ["Go", "Kubernetes", "Helm", "Terraform", "AWS", "ArgoCD"],
-      metrics: {
-        status: "passing",
-        latency: "120ms p95",
-        lastDeploy: "12h ago",
-      },
+      stack: ["Go", "Kubernetes", "Helm", "Terraform", "AWS", "CI/CD"],
       icon: <Box className="w-5 h-5" />,
       repo: "https://github.com/ashutosh-lodha/idp-platform",
     },
@@ -23,11 +18,6 @@ export function Projects() {
       description:
         "Distributed API gateway with token-bucket rate limiting backed by Redis. Pluggable middleware, per-route policies, and Prometheus metrics for production observability.",
       stack: ["Go", "Redis", "NGINX", "Docker", "Prometheus", "Grafana"],
-      metrics: {
-        status: "operational",
-        latency: "8ms p99",
-        lastDeploy: "2d ago",
-      },
       icon: <Server className="w-5 h-5" />,
       repo: "https://github.com/ashutosh-lodha/api-gateway-rate-limiter",
     },
@@ -65,10 +55,6 @@ export function Projects() {
                   {project.icon}
                   {project.title.toLowerCase().replace(/ /g, '-')}
                 </div>
-                <div className="flex items-center gap-2 text-xs font-mono">
-                  <span className="w-2 h-2 rounded-full bg-chart-4 animate-pulse" />
-                  <span className="text-chart-4 uppercase">{project.metrics.status}</span>
-                </div>
               </div>
 
               {/* Card Body */}
@@ -76,23 +62,6 @@ export function Projects() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
-
-                {/* Metrics Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-6 p-3 bg-muted/30 rounded-md border border-border/50">
-                  <div className="flex flex-col gap-1">
-                    <span className="text-xs text-muted-foreground font-mono uppercase">Metric 1</span>
-                    <span className="text-sm font-mono text-foreground">
-                      <Activity className="w-3 h-3 inline mr-1 text-primary" />
-                      {Object.values(project.metrics)[1]}
-                    </span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-xs text-muted-foreground font-mono uppercase">Deployed</span>
-                    <span className="text-sm font-mono text-foreground">
-                      {project.metrics.lastDeploy}
-                    </span>
-                  </div>
-                </div>
 
                 {/* Stack Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">

@@ -16,9 +16,8 @@ import { HeroSceneSafe } from "../three/HeroSceneSafe";
 const ROLES = [
   "Platform Engineer",
   "DevOps Engineer",
-  "Go Backend Dev",
+  "Backend Dev",
   "Kubernetes Operator",
-  "IaC Specialist",
 ];
 
 function useTypewriter(words: string[], typingMs = 80, holdMs = 1400) {
@@ -74,17 +73,8 @@ function GlitchText({ children }: { children: string }) {
 }
 
 const PODS = [
-  { name: "idp-platform-7d4f", status: "Running", age: "412d", node: "ap-south-1a" },
-  { name: "api-gateway-9c2a", status: "Running", age: "287d", node: "ap-south-1b" },
-  { name: "telemetry-bus-1e8", status: "Running", age: "92d", node: "ap-south-1c" },
-  { name: "argocd-sync-44f", status: "Healthy", age: "521d", node: "ap-south-1a" },
-];
-
-const STATS = [
-  { label: "uptime", value: "99.98%", icon: Activity },
-  { label: "deploys/wk", value: "240+", icon: GitBranch },
-  { label: "services", value: "60+", icon: Cpu },
-  { label: "p99 latency", value: "8ms", icon: Zap },
+  { name: "idp-platform", status: "Running", node: "ap-south-1a" },
+  { name: "api-gateway-rate-limiter", status: "Running", node: "ap-south-1b" },
 ];
 
 export function Hero() {
@@ -121,28 +111,7 @@ export function Hero() {
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[160px] pointer-events-none" />
 
-      {/* Layer 3: top status strip */}
-      <div className="absolute top-16 left-0 right-0 z-10 border-y border-border/40 bg-background/40 backdrop-blur-sm">
-        <div className="container mx-auto px-4 md:px-6 flex items-center justify-between font-mono text-[11px] text-muted-foreground py-2">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-chart-4 animate-pulse" />
-              <span className="uppercase tracking-widest">cluster: prod-ap-south-1</span>
-            </span>
-            <span className="hidden sm:inline opacity-60">|</span>
-            <span className="hidden sm:inline">build: passing</span>
-            <span className="hidden md:inline opacity-60">|</span>
-            <span className="hidden md:inline">last deploy: 12h ago</span>
-          </div>
-          <div className="hidden md:flex items-center gap-4">
-            <span>v2.4.0</span>
-            <span className="opacity-60">|</span>
-            <span>region: ap-south-1</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Layer 4: content */}
+      {/* Layer 3: content */}
       <motion.div
         style={{ y: contentY, opacity: contentOpacity }}
         className="container mx-auto px-4 md:px-6 z-10 grid lg:grid-cols-12 gap-10 items-center pt-16"
@@ -259,7 +228,6 @@ export function Hero() {
               <div className="grid grid-cols-[1fr_auto_auto] gap-x-4 mt-2 text-[11px] uppercase text-muted-foreground/70 tracking-wider">
                 <span>name</span>
                 <span>status</span>
-                <span>age</span>
               </div>
               <div className="h-px bg-border/60 my-1.5" />
               {PODS.map((p, i) => (
@@ -275,38 +243,12 @@ export function Hero() {
                     <span className="w-1.5 h-1.5 rounded-full bg-chart-4 animate-pulse" />
                     {p.status}
                   </span>
-                  <span className="text-muted-foreground">{p.age}</span>
                 </motion.div>
               ))}
               <div className="text-primary mt-3 flex items-center">
                 $<span className="ml-1.5 inline-block w-2 h-3.5 bg-primary animate-pulse" />
               </div>
             </div>
-          </div>
-
-          {/* stat tiles */}
-          <div className="grid grid-cols-2 gap-3">
-            {STATS.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.55 + i * 0.06 }}
-                className="rounded-md border border-border/60 bg-card/60 backdrop-blur-md p-3 flex items-center gap-3 hover:border-primary/40 transition-colors"
-              >
-                <div className="p-2 rounded-sm bg-primary/10 text-primary border border-primary/20">
-                  <s.icon className="w-4 h-4" />
-                </div>
-                <div className="flex flex-col leading-tight">
-                  <span className="font-mono text-base text-foreground">
-                    {s.value}
-                  </span>
-                  <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-                    {s.label}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </motion.div>
@@ -316,7 +258,7 @@ export function Hero() {
         <div className="flex whitespace-nowrap py-2.5 animate-[marquee_38s_linear_infinite] font-mono text-[11px] text-muted-foreground">
           {Array.from({ length: 2 }).flatMap((_, k) =>
             [
-              "GO", "KUBERNETES", "TERRAFORM", "HELM", "ARGOCD", "DOCKER",
+              "GO", "KUBERNETES", "TERRAFORM", "HELM", "CI/CD", "DOCKER",
               "AWS", "PROMETHEUS", "GRAFANA", "REDIS", "POSTGRES", "NGINX",
               "GITOPS", "OBSERVABILITY", "PLATFORM ENGINEERING", "SRE",
             ].map((t) => (
