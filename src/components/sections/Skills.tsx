@@ -36,7 +36,7 @@ export function Skills() {
   const stackCategories: Category[] = [
     {
       title: "DevOps · Cloud · Platform",
-      subtitle: "infra/",
+      subtitle: "aws/",
       color: "primary",
       glyph: <Cloud className="w-6 h-6" />,
       skills: [
