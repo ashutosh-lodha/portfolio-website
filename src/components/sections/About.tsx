@@ -5,18 +5,22 @@ import { useState, useEffect } from "react";
 export function About() {
   const [text, setText] = useState("");
   const fullText = `> whoami
-Ashutosh Lodha — Platform Engineer
+Ashutosh Lodha — DevOps/Platform Engineer
 
 > mission
-Turning complex infrastructure into scalable, self-service platforms.
+Designing scalable cloud infrastructure and self-service platforms using AWS, Kubernetes, and DevOps automation.
+
+> certifications
+AWS Certified Solutions Architect
 
 > stack
-Go • Kubernetes • Terraform • AWS • Prometheus • Grafana
+Go • Kubernetes • Terraform • AWS • Prometheus • Grafana • Docker • GitOps
 
 > impact
-[+] Built internal platforms and automated deployments
-[+] Reduced manual ops with CI/CD and IaC workflows
-[+] Enabled faster, reliable releases at scale
+[+] Built scalable DevOps and Kubernetes platforms
+[+] Automated infrastructure provisioning using Terraform and AWS
+[+] Reduced deployment friction with CI/CD and GitOps workflows
+[+] Improved reliability, observability, and cloud scalability
 
 > status
 Deploying. Scaling. Open to work.`;

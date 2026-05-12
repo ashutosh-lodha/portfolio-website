@@ -100,7 +100,12 @@ export function Projects() {
             <ul className="space-y-3">
               <li className="flex gap-3 text-muted-foreground">
                 <ShieldCheck className="w-5 h-5 shrink-0 text-chart-4" />
-                <span><strong className="text-foreground">AWS Academy Graduate</strong> - Certified cloud practitioner competencies.</span>
+                <span>
+                  <strong className="text-foreground">
+                    AWS Certified Solutions Architect
+                  </strong>
+                  {" "}— Architecting scalable, secure, and highly available cloud infrastructure using AWS services and Kubernetes.
+                </span>
               </li>
               <li className="flex gap-3 text-muted-foreground">
                 <ShieldCheck className="w-5 h-5 shrink-0 text-secondary" />
