@@ -19,6 +19,8 @@ import {
   SiPostgresql,
   SiPrometheus,
   SiGrafana,
+  SiJenkins,
+  SiArgocd,
 } from "react-icons/si";
 import { Cloud as SiAmazon, Cloud, Code2, Database, LineChart } from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
@@ -47,6 +49,8 @@ export function Skills() {
         { name: "Kubernetes", icon: SiKubernetes },
         { name: "Helm", icon: SiHelm },
         { name: "Terraform", icon: SiTerraform },
+        { name: "Jenkins", icon: SiJenkins },
+        { name: "ArgoCD", icon: SiArgocd },
         { name: "NGINX", icon: SiNginx },
         { name: "Git", icon: SiGit },
       ],
