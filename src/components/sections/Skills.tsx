@@ -20,7 +20,7 @@ import {
   SiPrometheus,
   SiGrafana,
   SiJenkins,
-  SiArgocd,
+  SiArgo,
 } from "react-icons/si";
 import { Cloud as SiAmazon, Cloud, Code2, Database, LineChart } from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
@@ -50,7 +50,7 @@ export function Skills() {
         { name: "Helm", icon: SiHelm },
         { name: "Terraform", icon: SiTerraform },
         { name: "Jenkins", icon: SiJenkins },
-        { name: "ArgoCD", icon: SiArgocd },
+        { name: "ArgoCD", icon: SiArgo },
         { name: "NGINX", icon: SiNginx },
         { name: "Git", icon: SiGit },
       ],
